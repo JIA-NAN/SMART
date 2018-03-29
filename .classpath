@@ -19,5 +19,6 @@
 	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/structs/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/structs/struts-2.3.34-all/struts-2.3.34/lib/struts2-spring-plugin-2.3.34.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/AOP"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/AJAX"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

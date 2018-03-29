@@ -13,11 +13,19 @@
         <result name = "error">/WEB-INF/content/error.jsp</result>
         <result name = "success">/WEB-INF/content/welcome.jsp</result>
     </action>
+    </package>
+    
+    <package name="book" namespace="/" extends="struts-default"> 
+    <action name="book" class="bookAction">
+    	<result name="input">/WEB-INF/content/login.jsp</result>
+        <result name = "error">/WEB-INF/content/error.jsp</result>
+        <result name = "success">/WEB-INF/content/welcome.jsp</result>
+    </action>
     </package>   
     
     <package name="default" namespace="/" extends="struts-default"> 
 		<action name="*">
-        	<result>/WEB-INF/content/login.jsp</result>
+        	<result>/WEB-INF/content/index.jsp</result>
         </action>
     </package>  
 </struts>

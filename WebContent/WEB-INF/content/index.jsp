@@ -1,12 +1,37 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<s:include value="header.jsp"/>
 <body>
-<h1>Index</h1>
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">Struts2 Bootstrap Plugin Showcase - <s:text name="showcase.version"/></a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <s:url var="index_url" action="index"/>
+            <li class="active"><s:a href="%{index_url}">Home</s:a></li>
+            <s:url var="about_url" action="about"/>
+            <li><s:a href="%{about_url}">About</s:a></li>
+            <li><a href="https://github.com/struts-community-plugins/struts2-bootstrap/">Project</a></li>
+        </ul>
+    </div>
+</nav>
+
+<s:form theme="simple" cssClass="well form-search">
+    <s:textfield
+            placeholder="Login"
+            name="login"
+            tooltip="Enter your Name here"/>
+
+    <s:password
+            placeholder="Password"
+            name="password"/>
+
+    <s:submit cssClass="btn btn-primary"/>
+</s:form>
 </body>
-</html>
+<jsp:include page="footer.jsp"/>
